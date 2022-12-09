@@ -1,0 +1,65 @@
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    // font-family: "GilroyRegular", sans-serif;
+    background-color: #afafaf;
+    color: #000;
+    height: 100%;
+    width: 100%;
+    min-width: 375px;
+    overflow: hidden;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+}
+
+button {
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+input,
+textarea {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+p {
+    margin: 0;
+}
+
+.Container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
