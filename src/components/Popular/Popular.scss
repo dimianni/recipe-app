@@ -1,0 +1,18 @@
+.Popular {
+    h3 {
+        font-size: 24px;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+    &-list {
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        &_el {
+            // width: 30%;
+            // padding: 20px;
+        overflow: hidden;
+
+        }
+    }
+}

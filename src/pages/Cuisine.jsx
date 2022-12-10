@@ -27,11 +27,12 @@ const Cuisine = () => {
         <>
             <h4> <b>Cuisine</b> </h4>
             {cuisine?.map((el, i) => {
-                console.log(el);
                 return (
-                    <div>
-                        {el.title}
-                    </div>
+                    <Link to={`/recipe/${el.id}`}>
+                        <div key={i}>
+                            {el.title}
+                        </div>
+                    </Link>
                 )
             })}
         </>

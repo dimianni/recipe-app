@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { Link } from 'react-router-dom';
+import './Popular.scss'
 
 const Popular = () => {
 
@@ -17,7 +19,7 @@ const Popular = () => {
         // Retreiving data from localstorage 
         const check = localStorage.getItem('popular');
 
-        if (check){
+        if (check) {
             // If data is in localstorage - set it for the state
             setPopularRecepes(JSON.parse(check))
         } else {
@@ -34,23 +36,29 @@ const Popular = () => {
             }
         }
 
-      
+
     }
-    
+
     return (
-        <div>
+        <div className='Popular'>
             <h3>Popular picks</h3>
-            <Splide options={{type: 'loop', perPage: 3, pagination: false}}>
-                {popularRecepes?.map((rec, i) => {
-                    // '?' above is optional chaining. If the object is undefined or null, it returns undefined instead of throwing an error.
-                    return (
-                        <SplideSlide key={i}>
-                            <p>{rec.title}</p>
-                            <img src={rec.image} alt={rec.title} />
-                        </SplideSlide>
-                    )
-                })}
-            </Splide>
+            <div>
+                <Splide className='Popular-list' options={{ type: 'loop', perPage: 3, pagination: false }}>
+                    {popularRecepes?.map((rec, i) => {
+                        // '?' above is optional chaining. If the object is undefined or null, it returns undefined instead of throwing an error.
+                        return (
+                            <SplideSlide className='Popular-list_el'>
+                                <Link key={i} to={`/recipe/${rec.id}`}>
+                                    <p>{rec.title}</p>
+                                    <img src={rec.image} alt={rec.title} />
+                                </Link>
+                            </SplideSlide>
+
+                        )
+                    })}
+                </Splide>
+            </div>
+           
         </div>
     )
 }

@@ -1,0 +1,24 @@
+.CuisineCategories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CuisineCat{
+    height: 80px;
+    width: 80px;
+    background-color: #f8c566;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #24160b;
+}
+
+.active{
+    background-color: #efae35;
+    /* background-color: #24160b; */
+}

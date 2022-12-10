@@ -10,14 +10,15 @@ html {
 }
 
 body {
-    // font-family: "GilroyRegular", sans-serif;
-    background-color: #afafaf;
-    color: #000;
+    background-color: #fcf8f4;
+    color: #24160b;
     height: 100%;
     width: 100%;
     min-width: 375px;
     overflow: hidden;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -44,8 +45,10 @@ button {
 }
 input,
 textarea {
-    border-radius: 0 !important;
     box-shadow: none !important;
+    &:focus{
+        outline: none;
+    }
 }
 ul,
 li {
@@ -62,4 +65,8 @@ p {
     max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
+}
+
+.Home{
+    
 }
